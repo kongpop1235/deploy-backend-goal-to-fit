@@ -5,7 +5,7 @@ const signUpTemplateCopy = require('../modles/signupModles');
 router.put('/', async (req, res) => {
     signUpTemplateCopy.findOne({username: req.body.username})
     .then(data => {
-        res.send(data);
+        res.send(data.activity);
     })
 })
 
