@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 
 router.put('/', async (req, res) => {
     signUpTemplateCopy.findOne({username: req.body.username}).activity.walk 
-    .then(date => {
+    .then(data => {
         res.send(data);
     })
 })
