@@ -30,4 +30,7 @@ app.use('/login', login);
 const signup = require('./routes/signup');
 app.use('/signup', signup);
 
+const add = require('./routes/add');
+app.use('/add', add);
+
 module.exports = app;
