@@ -24,11 +24,10 @@ if (config.isVercel) {
   })
 }
 
-
-
 const login = require('./routes/login');
-app.use('/', login);
+app.use('/login', login);
 
-
+const signup = require('./routes/signup');
+app.use('/signup', signup);
 
 module.exports = app;
