@@ -3,7 +3,7 @@ const router = express.Router();
 const signUpTemplateCopy = require('../modles/signupModles');
 const bcrypt = require('bcrypt');
 
-router.post('/signup', async (req, res) => {
+router.post('/', async (req, res) => {
 
     const saltPassword = await bcrypt.genSalt(10)
     const securePassword = await bcrypt.hash(req.body.password, saltPassword)
