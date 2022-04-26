@@ -46,10 +46,16 @@ const signUpTemplate = new mongoose.Schema({
                 type: Boolean,
                 default: false
             },
+            title: {
+                type: String,
+            },
             duration: {
                 type: Number,
                 default: '0'
             },
+            date: {
+                type: Date,
+            }
         },
         run: {
             show: {
