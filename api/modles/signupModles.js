@@ -2,9 +2,7 @@ const { ObjectId } = require('mongodb');
 const mongoose = require('mongoose');
 
 const signUpTemplate = new mongoose.Schema({
-    _id:{
-        type: ObjectId,
-    },
+
     username: {
         type: String,
         required: true,
