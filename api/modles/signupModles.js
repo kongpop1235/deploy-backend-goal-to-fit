@@ -42,7 +42,25 @@ const signUpTemplate = new mongoose.Schema({
         type: Number,
     },
     activity: {
-        walk: [{
+        walk: [
+            {
+                show: {
+                    type: Boolean,
+                    default: false
+                },
+                title: {
+                    type: String,
+                },
+                duration: {
+                    type: Number,
+                    default: '0'
+                },
+                date: {
+                    type: Date,
+                }
+            },
+        ],
+        run: {
             show: {
                 type: Boolean,
                 default: false
@@ -57,8 +75,8 @@ const signUpTemplate = new mongoose.Schema({
             date: {
                 type: Date,
             }
-        }],
-        run: [{
+        },
+        bikking: {
             show: {
                 type: Boolean,
                 default: false
@@ -73,8 +91,8 @@ const signUpTemplate = new mongoose.Schema({
             date: {
                 type: Date,
             }
-        }],
-        bikking: [{
+        },
+        swimming: {
             show: {
                 type: Boolean,
                 default: false
@@ -89,8 +107,8 @@ const signUpTemplate = new mongoose.Schema({
             date: {
                 type: Date,
             }
-        }],
-        swimming: [{
+        },
+        pushups: {
             show: {
                 type: Boolean,
                 default: false
@@ -105,8 +123,8 @@ const signUpTemplate = new mongoose.Schema({
             date: {
                 type: Date,
             }
-        }],
-        pushups: [{
+        },
+        hulaHoop: {
             show: {
                 type: Boolean,
                 default: false
@@ -121,8 +139,8 @@ const signUpTemplate = new mongoose.Schema({
             date: {
                 type: Date,
             }
-        }],
-        hulaHoop: [{
+        },
+        boxing: {
             show: {
                 type: Boolean,
                 default: false
@@ -137,8 +155,8 @@ const signUpTemplate = new mongoose.Schema({
             date: {
                 type: Date,
             }
-        }],
-        boxing: [{
+        },
+        badminton: {
             show: {
                 type: Boolean,
                 default: false
@@ -153,8 +171,8 @@ const signUpTemplate = new mongoose.Schema({
             date: {
                 type: Date,
             }
-        }],
-        badminton: [{
+        },
+        yoga: {
             show: {
                 type: Boolean,
                 default: false
@@ -169,8 +187,8 @@ const signUpTemplate = new mongoose.Schema({
             date: {
                 type: Date,
             }
-        }],
-        yoga: [{
+        },
+        weight: {
             show: {
                 type: Boolean,
                 default: false
@@ -185,23 +203,7 @@ const signUpTemplate = new mongoose.Schema({
             date: {
                 type: Date,
             }
-        }],
-        weight: [{
-            show: {
-                type: Boolean,
-                default: false
-            },
-            title: {
-                type: String,
-            },
-            duration: {
-                type: Number,
-                default: '0'
-            },
-            date: {
-                type: Date,
-            }
-        }],
+        },
     }
 })
 
