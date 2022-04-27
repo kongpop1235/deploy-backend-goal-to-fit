@@ -1,9 +1,6 @@
 const mongoose = require('mongoose');
 
 const signUpTemplate = new mongoose.Schema({
-    _id:{
-        type: String,
-    },
     username: {
         type: String,
         required: true,
