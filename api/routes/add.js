@@ -3,7 +3,7 @@ const router = express.Router();
 const signUpTemplateCopy = require('../modles/signupModles');
 
 router.post('/:_id', (req, res) => {
-    signUpTemplateCopy.findOneAndUpdate({_id: req.params._id}, {username: "kongpop1235"})
+    signUpTemplateCopy.findOneAndDelete({_id: req.params._id})
     .then(data => {
         res.send(data);
     })
