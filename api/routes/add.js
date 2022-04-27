@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const signUpTemplateCopy = require('../modles/signupModles');
+const forFindCopy = require('../modles/forFind');
 
 router.post('/:_id', (req, res) => {
-    signUpTemplateCopy.findOneAndDelete({_id: req.params._id})
+    forFindCopy.findOneAndDelete({_id: req.params._id})
     .then(data => {
         res.send(data);
     })

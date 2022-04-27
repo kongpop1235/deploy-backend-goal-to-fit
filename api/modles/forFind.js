@@ -1,7 +1,7 @@
 const { ObjectId } = require('mongodb');
 const mongoose = require('mongoose');
 
-const signUpTemplate = new mongoose.Schema({
+const forFind = new mongoose.Schema({
     _id: {
         type: ObjectId
     },
@@ -208,4 +208,4 @@ const signUpTemplate = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('users', signUpTemplate);
+module.exports = mongoose.model('users', forFind);
