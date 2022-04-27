@@ -1,6 +1,10 @@
+const { ObjectId } = require('mongodb');
 const mongoose = require('mongoose');
 
 const signUpTemplate = new mongoose.Schema({
+    _id: {
+        type: ObjectId,
+    },
     username: {
         type: String,
         required: true,
@@ -41,7 +45,7 @@ const signUpTemplate = new mongoose.Schema({
         type: Number,
     },
     activity: {
-        walk: {
+        walk: [{
             show: {
                 type: Boolean,
                 default: false
@@ -56,8 +60,8 @@ const signUpTemplate = new mongoose.Schema({
             date: {
                 type: Date,
             }
-        },
-        run: {
+        }],
+        run: [{
             show: {
                 type: Boolean,
                 default: false
@@ -66,8 +70,8 @@ const signUpTemplate = new mongoose.Schema({
                 type: Number,
                 default: '0'
             }
-        },
-        bikking: {
+        }],
+        bikking: [{
             show: {
                 type: Boolean,
                 default: false
@@ -76,8 +80,8 @@ const signUpTemplate = new mongoose.Schema({
                 type: Number,
                 default: '0'
             }
-        },
-        swimming: {
+        }],
+        swimming: [{
             show: {
                 type: Boolean,
                 default: false
@@ -86,8 +90,8 @@ const signUpTemplate = new mongoose.Schema({
                 type: Number,
                 default: '0'
             }
-        },
-        pushups: {
+        }],
+        pushups: [{
             show: {
                 type: Boolean,
                 default: false
@@ -96,8 +100,8 @@ const signUpTemplate = new mongoose.Schema({
                 type: Number,
                 default: '0'
             }
-        },
-        hulaHoop: {
+        }],
+        hulaHoop: [{
             show: {
                 type: Boolean,
                 default: false
@@ -106,8 +110,8 @@ const signUpTemplate = new mongoose.Schema({
                 type: Number,
                 default: '0'
             }
-        },
-        boxing: {
+        }],
+        boxing: [{
             show: {
                 type: Boolean,
                 default: false
@@ -116,8 +120,8 @@ const signUpTemplate = new mongoose.Schema({
                 type: Number,
                 default: '0'
             }
-        },
-        badminton: {
+        }],
+        badminton: [{
             show: {
                 type: Boolean,
                 default: false
@@ -126,8 +130,8 @@ const signUpTemplate = new mongoose.Schema({
                 type: Number,
                 default: '0'
             }
-        },
-        yoga: {
+        }],
+        yoga: [{
             show: {
                 type: Boolean,
                 default: false
@@ -136,8 +140,8 @@ const signUpTemplate = new mongoose.Schema({
                 type: Number,
                 default: '0'
             }
-        },
-        weight: {
+        }],
+        weight: [{
             show: {
                 type: Boolean,
                 default: false
@@ -146,7 +150,7 @@ const signUpTemplate = new mongoose.Schema({
                 type: Number,
                 default: '0'
             }
-        },
+        }],
     }
 })
 
