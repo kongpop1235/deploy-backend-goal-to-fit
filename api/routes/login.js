@@ -10,23 +10,31 @@ router.post('/', (req, res) => {
             // res.send(data)
             // const pass = req.body.password;
             // const passcheck = data.password;
-            bcrypt.compare(req.body.password, data.password, (err, result) => {
-                // if (err) throw err;
-                if (result === true) {
-                    const loginFinish = {
-                        check: true,
-                        data: data
-                    }
-                    // res.send(check);
-                    res.send(loginFinish);
-                } else {
-                    res.status(401).send("error 401");
-                }
-            })
-        })
-        .catch(error => {
-            res.json(error);
-        })
+    bcrypt.compare(req.body.password, data.password, (err, result) => {
+        // if (err) throw err;
+        if (result === true) {
+
+            const dataCheck = [
+                { "activity": data.activity },
+                { "_id": data._id},
+                { "username": data.username},
+                { "phone": data.phone}
+            ];
+
+            const loginFinish = {
+                check: true,
+                data: data
+            }
+            // res.send(check);
+            res.send(dataCheck);
+        } else {
+            res.status(401).send("error 401");
+        }
+    })
+})
+    .catch(error => {
+        res.json(error);
+    })
 })
 
 

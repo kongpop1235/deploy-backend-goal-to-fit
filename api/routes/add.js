@@ -2,9 +2,9 @@ const express = require("express");
 const router = express.Router();
 const signUpTemplateCopy = require('../modles/signupModles');
 
-router.put('/', async (req, res) => {
+router.post('/', async (req, res) => {
     signUpTemplateCopy.findOne({username: req.body.username})
-    .then(data => {
+    .save(data => {
         res.send(data.activity);
     })
 })
