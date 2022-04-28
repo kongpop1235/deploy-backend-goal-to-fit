@@ -208,4 +208,4 @@ const forFind = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('users', forFind);
+module.exports = mongoose.model('find', forFind);
