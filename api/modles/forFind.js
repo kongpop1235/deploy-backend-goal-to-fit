@@ -1,11 +1,10 @@
-const { ObjectID } = require("bson");
-const { ObjectId } = require("mongodb");
-const mongoose = require("mongoose");
+const { ObjectId } = require('mongodb');
+const mongoose = require('mongoose');
 
-const signUpTemplate = new mongoose.Schema({
-    // _id: {
-    //     type: ObjectID
-    // },
+const forFind = new mongoose.Schema({
+    _id: {
+        type: ObjectId
+    },
     username: {
         type: String,
         required: true,
@@ -46,26 +45,26 @@ const signUpTemplate = new mongoose.Schema({
         type: Number,
     },
     walk: [
-        // {
-        //     $push: {
-        //         show: {
-        //             type: Boolean,
-        //             default: false,
-        //             required: true,
-        //         },
-        //         title: {
-        //             type: String,
-        //         },
-        //         duration: {
-        //             type: Number,
-        //             default: "0",
-        //             required: true,
-        //         },
-        //         date: {
-        //             type: Date,
-        //         },
-        //     }
-        // },
+        {
+            //     $push: {
+            //         show: {
+            //             type: Boolean,
+            //             default: false,
+            //             required: true,
+            //         },
+            title: {
+                type: String,
+            },
+            duration: {
+                type: Number,
+                default: "0",
+                required: true,
+            },
+            date: {
+                type: Date,
+            },
+            // }
+        },
     ],
     run: {
         show: {
@@ -211,6 +210,6 @@ const signUpTemplate = new mongoose.Schema({
             type: Date,
         },
     },
-});
+})
 
-module.exports = mongoose.model("users", signUpTemplate);
+module.exports = mongoose.model('user', forFind);
