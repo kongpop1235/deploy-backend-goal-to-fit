@@ -44,24 +44,22 @@ const signUpTemplate = new mongoose.Schema({
     activity: {
         walk: [
             {
-                $push: {
-                    show: {
-                        type: Boolean,
-                        default: false,
-                        required: true,
-                    },
-                    title: {
-                        type: String,
-                    },
-                    duration: {
-                        type: Number,
-                        default: "0",
-                        required: true,
-                    },
-                    date: {
-                        type: Date,
-                    },
-                }
+                show: {
+                    type: Boolean,
+                    default: false,
+                    required: true,
+                },
+                title: {
+                    type: String,
+                },
+                duration: {
+                    type: Number,
+                    default: "0",
+                    required: true,
+                },
+                date: {
+                    type: Date,
+                },
             },
             {
                 show: {
