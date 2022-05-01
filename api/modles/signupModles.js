@@ -75,7 +75,22 @@ const signUpTemplate = new mongoose.Schema({
     boxing: [],
     badminton: [],
     yoga: [],
-    weight: [],
+    weight: {
+        show: {
+            type: Boolean,
+            default: false,
+        },
+        title: {
+            type: String,
+        },
+        duration: {
+            type: Number,
+            default: "0",
+        },
+        date: {
+            type: Date,
+        },
+    },
 });
 
 module.exports = mongoose.model("users", signUpTemplate);

@@ -40,7 +40,7 @@ router.post('/', (req, res) => {
             })
         })
         .catch(error => {
-            res.json(error);
+            res.json('error');
         })
 })
 
