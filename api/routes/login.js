@@ -12,7 +12,15 @@ router.post('/', (req, res) => {
                     const dataCheck = {
                         check: true,
                         data: {
-                            activity: data.activity,
+                            walk: data.walk,
+                            run: data.run,
+                            bikking: data.bikking,
+                            swimming: data.swimming,
+                            pushups: data.pushups,
+                            hulaHoop: data.hulaHoop,
+                            boxing: data.box,
+                            badminton: data.badminton,
+                            yoga: data.yoga,
                             _id: data._id,
                             username: data.username,
                             phone: data.phone,

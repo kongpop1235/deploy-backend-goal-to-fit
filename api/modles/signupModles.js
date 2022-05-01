@@ -67,150 +67,15 @@ const signUpTemplate = new mongoose.Schema({
         //     }
         // },
     ],
-    run: {
-        show: {
-            type: Boolean,
-            default: false,
-        },
-        title: {
-            type: String,
-        },
-        duration: {
-            type: Number,
-            default: "0",
-        },
-        date: {
-            type: Date,
-        },
-    },
-    bikking: {
-        show: {
-            type: Boolean,
-            default: false,
-        },
-        title: {
-            type: String,
-        },
-        duration: {
-            type: Number,
-            default: "0",
-        },
-        date: {
-            type: Date,
-        },
-    },
-    swimming: {
-        show: {
-            type: Boolean,
-            default: false,
-        },
-        title: {
-            type: String,
-        },
-        duration: {
-            type: Number,
-            default: "0",
-        },
-        date: {
-            type: Date,
-        },
-    },
-    pushups: {
-        show: {
-            type: Boolean,
-            default: false,
-        },
-        title: {
-            type: String,
-        },
-        duration: {
-            type: Number,
-            default: "0",
-        },
-        date: {
-            type: Date,
-        },
-    },
-    hulaHoop: {
-        show: {
-            type: Boolean,
-            default: false,
-        },
-        title: {
-            type: String,
-        },
-        duration: {
-            type: Number,
-            default: "0",
-        },
-        date: {
-            type: Date,
-        },
-    },
-    boxing: {
-        show: {
-            type: Boolean,
-            default: false,
-        },
-        title: {
-            type: String,
-        },
-        duration: {
-            type: Number,
-            default: "0",
-        },
-        date: {
-            type: Date,
-        },
-    },
-    badminton: {
-        show: {
-            type: Boolean,
-            default: false,
-        },
-        title: {
-            type: String,
-        },
-        duration: {
-            type: Number,
-            default: "0",
-        },
-        date: {
-            type: Date,
-        },
-    },
-    yoga: {
-        show: {
-            type: Boolean,
-            default: false,
-        },
-        title: {
-            type: String,
-        },
-        duration: {
-            type: Number,
-            default: "0",
-        },
-        date: {
-            type: Date,
-        },
-    },
-    weight: {
-        show: {
-            type: Boolean,
-            default: false,
-        },
-        title: {
-            type: String,
-        },
-        duration: {
-            type: Number,
-            default: "0",
-        },
-        date: {
-            type: Date,
-        },
-    },
+    run: [],
+    bikking: [],
+    swimming: [],
+    pushups: [],
+    hulaHoop: [],
+    boxing: [],
+    badminton: [],
+    yoga: [],
+    weight: [],
 });
 
 module.exports = mongoose.model("users", signUpTemplate);
