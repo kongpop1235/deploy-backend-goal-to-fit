@@ -10,7 +10,7 @@ router.post('/', (req, res) => {
             if(data == null) {
                 res.send("null");
             }
-            res.send(data);
+            res.send(true);
         })
         .catch(error => {
             res.json(error);
