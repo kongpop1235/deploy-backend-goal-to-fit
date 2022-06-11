@@ -8,6 +8,7 @@ const signUpTemplate = new mongoose.Schema({
     // },
     username: {
         type: String,
+        unique: true,
         required: true,
     },
     phone: {
