@@ -17,7 +17,7 @@ router.post('/', async (req, res) => {
         weight: req.body.weight,
         calories_gold: req.body.calories_gold
     })
-    signedUpUser.createIndex({"username": req.body.username}, {unique: true})
+    signedUpUser.createIndex()
         .then(data => {
             res.json(true)
         })
