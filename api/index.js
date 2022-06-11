@@ -27,6 +27,9 @@ if (config.isVercel) {
 const login = require('./routes/login');
 app.use('/login', login);
 
+const checkusername = require('./routes/checkUsername');
+app.use('/checkusername', checkusername);
+
 const signup = require('./routes/signup');
 app.use('/signup', signup);
 
