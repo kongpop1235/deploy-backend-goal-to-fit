@@ -8,7 +8,7 @@ router.post('/', (req, res) => {
     signUpTemplateCopy.findOne({ username: req.body.username })
         .then(data => {
             if(data === ""){
-                res.send(`""`);
+                res.send("ฟันหนู");
             }
             if(data === null){
                 res.send("null");
