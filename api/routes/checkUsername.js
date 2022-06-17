@@ -5,13 +5,16 @@ const bcrypt = require('bcrypt');
 
 
 router.post('/', (req, res) => {
-    signUpTemplateCopy.findOne({ username: req.body.username })
-        .then(data => {
+    signUpTemplateCopy.findOne({ username: req.body.username }, (err, result) => {
+        if (err) {
+            res.send(err);
+        }
+        if (result) {
             res.send(true);
-        })
-        .catch(error => {
-            res.json(error);
-        })
+        } else {
+            res.send(false);
+        }
+    })
 })
 
 module.exports = router;
